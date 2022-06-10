@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node main.js"
   },
-  "author": "",
+  "author": "gmisail",
   "license": "GPLv3",
   "dependencies": {
     "fuse.js": "^6.6.2",
