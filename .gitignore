@@ -1,0 +1,5 @@
+node_modules/
+episodes/
+*.csv
+
+.DS_Store
