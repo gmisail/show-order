@@ -43,7 +43,12 @@ let rename_episode = async (file, episode) => {
 }
 
 let process_episode = (episode) => {
-    const episode_name = readline.question(`[show-order] what is the episode name for ${episode.file_name}? `);
+    const episode_name = readline.question(`[show-order] what is the episode name for ${episode.file_name}? `).trim();
+   
+    // pressing return skips this episode
+    if (episode_name.length == 0)
+	return;
+
     const results = finder.search(episode_name);
     const match = results[0].item;
 
@@ -63,6 +68,7 @@ const episodes = load_episodes(episode_path);
 
 console.log(`[show-order] loading series from ${series_csv_path}...`);
 const series = await load_series(series_csv_path);
+
 
 const episode_names = series.map(episode => episode.title);
 const finder = new Fuse(series, options);
