@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
+  "bin": "./main.js",
   "scripts": {
-    "start": "node main.js"
+    "start": "node main.js",
+    "format": "prettier --write ."
   },
   "author": "gmisail",
   "license": "GPLv3",
